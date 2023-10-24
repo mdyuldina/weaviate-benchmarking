@@ -6,8 +6,8 @@ services:
       context: ./
       dockerfile: Dockerfile-ann
     volumes:
-      - $PWD/benchmark-data:/var/hdf5
-      - $PWD/results:/var/lib/benchmark/results
+      - /var/lib/benchmark/hdf5:/var/lib/benchmark/hdf5
+      - /var/lib/benchmark/results:/var/lib/benchmark/results
   weaviate:
     command:
     - --host
